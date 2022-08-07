@@ -163,9 +163,10 @@ section .title::after{
 
 
 /* home section styling */
-.home{
+
+.home{ 
     display: flex;
-    background: url("images/banner.png") no-repeat center;
+    background: url("images/1.png") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -173,6 +174,21 @@ section .title::after{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
+@media screen and (max-width:850px) {
+     .home {
+    display: flex;
+    background: url("images/2.png") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+
+     }
+}
+
+
 .home .max-width{
   width: 100%;
   display: flex;
