@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+<!-- Created By Ayush -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -216,24 +216,9 @@ I build identities that speak to your audience, connect them with you, and make 
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form autocomplete="off">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text"  id="name" placeholder="Name"  required>
-                            </div>
-                            <div class="field email">
-                                <input type="email"  id="email" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text"  id="sub"  id="service" placeholder="Subject" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10"  id="msg" placeholder="Message.." required></textarea>
-                        </div>
-                        <div class="button-area">
-                            <a href="https://wa.me/917077011447?text=I'm%20saw%20your%20portfolio%20and%20i%20want%20to%20know%20more%20about%20your%20service"><button type=button onClick="parent.location='https://wa.me/917077011447?text=I'm%20saw%20your%20portfolioand%20i%20want%20to%20know%20more%20about%20your%20service'" value='click here to visit home page'>Send message</button></a>
-                        </div>
+                    
+        <form id="whatsAppAnyForm" class="whatsappFormCls" action="" method="POST" data-title="WhatsApp Demo Contact Form" novalidate>
+                        <iframe src="https://helloayush07.github.io/whatsapphtmlcssform" height="400" width="100%" title="Iframe Example" style="border:none;"></iframe>
                     </form>
                 </div>
             </div>
@@ -244,23 +229,14 @@ I build identities that speak to your audience, connect them with you, and make 
 
 
 <script>
-function gotowhatsapp() {
-    
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var sub = document.getElementById("sub").value;
-    var msg = document.getElementById("msg").value;
-
-    var url = "https://wa.me/917077011447?text=" 
-    + "Name: " + name + "%0a"
-    + "Mail: " + mail + "%0a"
-    + "Subject: " + sub  + "%0a"
-    + "Service: " + msg; 
-
-    window.open(url, '_blank').focus();
-}
+    (function($) {
+        "use strict";
+        $('#whatsAppAnyForm').appPlugin({
+            whatsappPhone: '+917077011447', // Your Whatsapp Number, on which you want to send message.
+            submissionMessage: 'You have been redirected to the WhatsApp to submit the message. Thank you.' // form submission message
+        });
+    })(jQuery);
 </script>
-
     <!-- footer section start -->
     <footer>
         <span>Created By <a href="https://instagram.com/brand.snappy/">Brand Snappy</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
